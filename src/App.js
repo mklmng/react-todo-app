@@ -1,7 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Child from './components/Child';
 
 class App extends Component {
   constructor(props) {
