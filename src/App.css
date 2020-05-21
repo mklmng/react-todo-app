@@ -39,6 +39,7 @@ body {font-size: 1.6rem;}
 .task-item{
   font-weight: bold;
   padding: 0 0.5rem 0.5rem;
+  cursor: pointer;
 }
 
 .task-item__content, .task-item__controls{
@@ -51,7 +52,7 @@ body {font-size: 1.6rem;}
 }
 
 .task-item__edit{
-  color:#CCC;
+  color:#222;
 }
 .task-item__edit::before{
   content: '[';
@@ -68,6 +69,21 @@ body {font-size: 1.6rem;}
 
 #todo-list{
   border-radius: 0.5rem;
+}
+
+#edit-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  padding: 2rem;
+  background-color: rgba(0,0,0,0.85);
+}
+#edit-overlay>h2{
+  margin-top: 0;
+  color: #FFF;
 }
 
 form, .list-wrapper{
