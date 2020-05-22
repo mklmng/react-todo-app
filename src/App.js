@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
-import './App.css';
-import Header from './components/Header';
+import './styles/App.css';
+import Header from './components/layout/Header';
+import Form from './components/layout/Form';
 
 class App extends Component {
   constructor(props) {
@@ -21,18 +22,7 @@ class App extends Component {
     return (
       <div id="todo-list">
         <Header />
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="new-task">Task: </label>
-          <input 
-            type="text"
-            id="new-task"
-            onChange={this.handleChange}
-            value={this.state.text}
-          />
-          <button>
-            Add task
-          </button>
-        </form>
+        <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} text={this.state.text} />
         {pendingTasks > 0 
           ? <div id="results"><h2>You have {pendingTasks > 1 ? `${pendingTasks} pending tasks` : `${pendingTasks} pending task`}.</h2></div>
           : <div id="results"><h2>You don't have any pending tasks.</h2></div>
