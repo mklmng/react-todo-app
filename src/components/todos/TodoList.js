@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-import TodoList from './TodoList';
-import TodoOverlay from './TodoOverlay.js';
+import TodoOverlay from './TodoOverlay';
+import TodoItem from './TodoItem';
 import PropTypes from 'prop-types';
 
-class Todos extends React.Component {
+class TodoList extends React.Component {
     constructor(props){
         super(props);
     }
@@ -20,16 +20,13 @@ class Todos extends React.Component {
     }
     
     render() {
-        const allTasks = this.props.tasks.length;
-
         return (
-            <Fragment>
-                {allTasks > 0 &&
-                    <TodoList {...this.props} />   
-                }
-            </Fragment>
+            <ol className="task-list">
+                <TodoOverlay {...this.props} />
+                <TodoItem {...this.props} />
+            </ol>
         );
     }
   }
 
-  export default Todos;
+  export default TodoList;

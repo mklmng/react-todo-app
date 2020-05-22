@@ -31,7 +31,6 @@ class App extends Component {
         <TodoResults tasks={this.state.tasks} />
         <Todos 
           tasks={this.state.tasks}
-          editId={this.state.editId}
           editMode={this.state.editMode}
           editText={this.state.editText}
           handleEdit={this.handleEdit}
