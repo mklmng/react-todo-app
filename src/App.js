@@ -16,6 +16,7 @@ class App extends Component {
 
   render() {
     const pendingTasks = this.state.tasks.filter(task => !task.complete).length;
+    const allTasks = this.state.tasks.length;
 
     return (
       <div id="todo-list">
@@ -36,13 +37,13 @@ class App extends Component {
           ? <div id="results"><h2>You have {pendingTasks > 1 ? `${pendingTasks} pending tasks` : `${pendingTasks} pending task`}.</h2></div>
           : <div id="results"><h2>You don't have any pending tasks.</h2></div>
         }     
+        {allTasks > 0 &&
           <ol className="task-list">
           {this.state.editMode && 
           <Fragment>
             <div id="edit-overlay">
-              <h2>Edit task</h2>
-              <input type="text" value={this.state.editText} onChange={this.handleEditChanges} />
-              <button onClick={()=> this.handleEditUpdates()}>Accept Changes</button> 
+              <input className="edit-overlay__input" type="text" value={this.state.editText} onChange={this.handleEditChanges} />
+              <button className="edit-overlay__cta" onClick={()=> this.handleEditUpdates()}>Accept Changes</button> 
             </div>
           </Fragment>
           }
@@ -62,6 +63,7 @@ class App extends Component {
             )
           }
           </ol>
+          }
       </div>
     );
   }
