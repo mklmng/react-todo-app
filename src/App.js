@@ -51,12 +51,12 @@ class App extends Component {
           {this.state.tasks.map((task, index) => (
               <li className="task-item" key={index}>
                   <div className="task-item__content">
-                      <span className={"task-item " + (task.complete ? "task--completed" : "")}>{task.text}</span>
+                      <span className={"task-item__content__text " + (task.complete ? "task--completed" : "")}>{task.text}</span>
                   </div>
                   <div className="task-item__controls">
-                      <span className="task-item task-item__edit" onClick={() => {this.handleEdit(index, task.text)}}>Edit</span>
-                      <span className="task-item task-item__delete" onClick={() => {this.handleDelete(index)}}>Delete</span>
-                      <span className="task-item task-item__complete" onClick={() => {this.handleComplete(index)}}>Complete</span>
+                      <span className="task-item__edit" onClick={() => {this.handleEdit(index, task.text)}}>Edit</span>
+                      <span className="task-item__delete" onClick={() => {this.handleDelete(index)}}>Delete</span>
+                      <span className="task-item__complete" onClick={() => {this.handleComplete(index)}}>Complete</span>
                   </div>
               </li>
               )
