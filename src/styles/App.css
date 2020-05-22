@@ -74,7 +74,7 @@ body {font-size: 1.6rem;}
 }
 
 .task-item__edit, .task-item__delete, .task-item__complete{
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .task-item__edit{
