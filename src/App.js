@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import './styles/App.css';
 import Header from './components/layout/Header';
 import Form from './components/layout/Form';
@@ -18,9 +18,6 @@ class App extends Component {
   }
 
   render() {
-    const pendingTasks = this.state.tasks.filter(task => !task.complete).length;
-    const allTasks = this.state.tasks.length;
-
     return (
       <div id="todo-list">
         <Header />
@@ -90,7 +87,6 @@ class App extends Component {
       text: ''
     }));
   }
-
 }
 
 export default App;

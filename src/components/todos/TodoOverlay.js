@@ -2,11 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 class TodoOverlay extends React.Component {
-    constructor(props){
-        super(props);
-
-    }
-
     static propTypes = {
         editMode: PropTypes.bool.isRequired,
         editText: PropTypes.string.isRequired,

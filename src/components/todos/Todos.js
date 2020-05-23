@@ -1,13 +1,8 @@
 import React, { Fragment } from 'react';
 import TodoList from './TodoList';
-import TodoOverlay from './TodoOverlay.js';
 import PropTypes from 'prop-types';
 
 class Todos extends React.Component {
-    constructor(props){
-        super(props);
-    }
-
     static propTypes = {
         tasks: PropTypes.array.isRequired,
         editMode: PropTypes.bool.isRequired,

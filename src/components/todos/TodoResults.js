@@ -2,11 +2,6 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 class TodoResults extends React.Component {
-    constructor(props){
-        super(props);
-
-    }
-
     static propTypes = {
         tasks: PropTypes.array.isRequired
     }
