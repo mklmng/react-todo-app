@@ -33,6 +33,7 @@ label[for=new-task]{display: none;}
 
 #new-task{
   padding: 0.5rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   max-width: 60vw;
 }
@@ -159,11 +160,13 @@ label[for=new-task]{display: none;}
 .edit-overlay__input{
   width: 68%;
   padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 .edit-overlay__cta{
   padding: 1rem;
   font-weight: bold;
   border-radius: 2rem;
+  border: 0;
 }
 
 #results{
